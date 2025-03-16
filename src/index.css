@@ -78,4 +78,9 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+  .border-gradient {
+    border-width: 1px;
+    border-style: solid;
+    border-image: linear-gradient(270.23deg, #FFFFFF -0.2%, rgba(138, 138, 138, 0.3) 105%);
+  }
 }

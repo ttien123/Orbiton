@@ -5,9 +5,14 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-		bgButtonType: 'linear-gradient(274.44deg, #836CDE 0.73%, #B866D2 61.7%, #FF72F8 110.58%)',
-		bgSectionHeader: 'linear-gradient(274.67deg, #836CDE -3.09%, rgba(184, 102, 210, 0.18) 92.5%);',
-        main: "url('@/assets/images/bgMain.png')",
+        bgBorder:
+          "linear-gradient(270.23deg, #FFFFFF -0.2%, rgba(138, 138, 138, 0.3) 105%)",
+        bgButtonType:
+          "linear-gradient(274.44deg, #836CDE 0.73%, #B866D2 61.7%, #FF72F8 110.58%)",
+        bgSectionHeader:
+          "linear-gradient(274.67deg, #836CDE -3.09%, rgba(184, 102, 210, 0.18) 92.5%);",
+        homeSection: "url('@/assets/images/bgMain.png')",
+        mainSection: "url('@/assets/images/bgMainSection.png')",
         footer: "url('@/assets/images/bgFooter.png')",
         layoutDot: "url('@/assets/images/bgLayout.png')",
         lightPlace: "url('@/assets/images/lightPlace.png')",
@@ -22,7 +27,6 @@ export default {
         sm: "calc(var(--radius) - 4px)",
       },
       colors: {
-		borderBoxContent: 'linear-gradient(270.23deg, #FFFFFF -0.2%, rgba(138, 138, 138, 0.3) 105%)',
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         card: {

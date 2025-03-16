@@ -1,16 +1,32 @@
 import { FC, PropsWithChildren } from "react";
+import { motion } from "motion/react";
 
 const BoxContent: FC<
   PropsWithChildren & {
     extendClassName?: string;
+    delayAnimation?: number;
   }
-> = ({ children, extendClassName }) => {
+> = ({ children, extendClassName, delayAnimation = 0 }) => {
   return (
-    <div
-      className={`py-10 px-8 border-borderBoxContent border rounded-[24px] text-center ${extendClassName}`}
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{
+        opacity: 1,
+      }}
+      viewport={{ once: true }}
+      transition={{
+        duration: 1.5,
+        ease: "easeOut",
+        delay: delayAnimation,
+      }}
+      className={`bg-bgBorder rounded-[24px] overflow-hidden p-[1px] min-h-[215px] ${extendClassName}`}
     >
-      {children}
-    </div>
+      <div
+        className={`py-10 px-8 text-center rounded-[24px] bg-[#161027] min-h-full`}
+      >
+        {children}
+      </div>
+    </motion.div>
   );
 };
 
