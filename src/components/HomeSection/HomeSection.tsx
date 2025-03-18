@@ -5,10 +5,10 @@ import ButtonPrimary from "../ButtonPrimary/ButtonPrimary";
 import { motion } from "motion/react";
 const HomeSection = () => {
   return (
-    <div>
+    <div className="px-4">
       <Header />
-      <div className="flex items-center justify-between containerCustom">
-        <div>
+      <div className="flex flex-col lg:flex-row items-center justify-between containerCustom mt-8 lg:mt-0">
+        <div className="text-center lg:text-left">
           <motion.img
             initial={{ y: "-250%", opacity: 0 }}
             whileInView={{
@@ -25,9 +25,10 @@ const HomeSection = () => {
               delay: 0.2,
             }}
             src={Orbitontext}
-            alt="Logo"
+            alt="Orbiton"
+            className="block max-w-[250px] lg:max-w-full mx-auto"
           />
-          <div className="text-[45px] mt-10">
+          <div className="lg:text-[45px] mt-3 lg:mt-10">
             <motion.div
               initial={{ y: "100%", opacity: 0 }}
               whileInView={{
@@ -71,11 +72,14 @@ const HomeSection = () => {
             transition={{
               duration: 0.45,
               ease: "easeOut",
-              delay: 1.3,
+              delay: 1.5,
             }}
-            className="mt-10"
+            className="lg:mt-10 mt-4"
           >
-            <ButtonPrimary extendClassName="py-5 px-[30px] w-auto" />
+            <ButtonPrimary
+              extendClassName="py-5 px-[30px] w-auto mx-auto lg:mx-0"
+              isLarge
+            />
           </motion.div>
         </div>
         <motion.div
@@ -87,8 +91,24 @@ const HomeSection = () => {
           transition={{
             duration: 1.5,
             ease: "easeOut",
-            delay: 0.25
+            delay: 0.25,
           }}
+          className="lg:block hidden"
+        >
+          <img src={IphoneImg} alt="Logo" />
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{
+            opacity: 1,
+          }}
+          viewport={{ once: true }}
+          transition={{
+            duration: 1.5,
+            ease: "easeOut",
+            delay: 1.5,
+          }}
+          className="lg:hidden block"
         >
           <img src={IphoneImg} alt="Logo" />
         </motion.div>

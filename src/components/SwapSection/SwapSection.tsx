@@ -7,11 +7,12 @@ import { Scrollbar } from "swiper/modules";
 import { Swiper as SwiperType } from "swiper";
 import "swiper/css";
 import { useRef, useState } from "react";
+
 const SwapSection = () => {
   const swiperRef = useRef<SwiperType | null>(null);
   const [activeIndex, setActiveIndex] = useState(0);
   return (
-    <div className="flex items-center justify-between gap-[75px]">
+    <div id="swap" className="flex items-center justify-between gap-4 lg:gap-[75px] min-h-screen">
       <div className="text-white flex-shrink-0 flex items-center justify-start">
         <button
           disabled={activeIndex === 0}
@@ -35,45 +36,29 @@ const SwapSection = () => {
       >
         {Array.from({ length: 3 }).map((_, index) => (
           <SwiperSlide key={index}>
-            <div className="py-[55px] flex items-center justify-between">
+            <div className="lg:flex items-center justify-between lg:text-left text-center">
               <div>
                 <div>
                   <button className="bg-bgSectionHeader text-[#FBFCF4] py-[17px] px-[24px] rounded-[10px] mb-6">
                     Solution
                   </button>
                 </div>
-                <div className="text-[70px] mb-4 text-primary-custom">
+                <div className="text-[32px] lg:text-[70px] mb-4 text-primary-custom">
                   Swap Flow
                 </div>
                 <div className="text-white">
                   Trade Crypto with Confidence on Our Growing Platform
                 </div>
-                <div className="mt-10">
-                  <ButtonPrimary extendClassName="py-5 px-[30px] w-auto" />
+                <div className="mt-10 lg:block hidden">
+                  <ButtonPrimary extendClassName="py-5 px-[30px] w-auto" isLarge/>
                 </div>
               </div>
-              <div>
-                <img src={iphoneImg2} alt="Logo" />
+              <div className="mt-[66px]">
+                <img src={iphoneImg2} alt="Logo" className="mx-auto lg:mx-0"/>
               </div>
             </div>
           </SwiperSlide>
         ))}
-        <div className="absolute left-0 bottom-[150px] z-10 flex items-center justify-center gap-[10px]">
-          {Array.from({ length: 3 }).map((_, indexPagination) => (
-            <div
-              onClick={() => swiperRef.current?.slideTo(indexPagination)}
-              className={`rounded-[50%] cursor-pointer flex items-center justify-center  w-[34px] h-[34px] ${
-                indexPagination === activeIndex
-                  ? "bg-bgSectionHeader"
-                  : "border"
-              }`}
-            >
-              <button className={`text-primary-custom rounded-[50%]`}>
-                {indexPagination + 1}
-              </button>
-            </div>
-          ))}
-        </div>
       </Swiper>
       <div className="text-white flex-shrink-0 flex items-center justify-start">
         <button

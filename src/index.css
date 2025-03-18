@@ -71,7 +71,7 @@
 
 @layer components {
   .containerCustom {
-    @apply w-full max-w-[1200px] m-auto;
+    @apply w-full lg:max-w-[1140px] xl:max-w-[1200px] m-auto;
   }
   .text-primary-custom {
     background: linear-gradient(270.23deg, #ffffff -0.2%, #8a8a8a 105%);
@@ -83,4 +83,7 @@
     border-style: solid;
     border-image: linear-gradient(270.23deg, #FFFFFF -0.2%, rgba(138, 138, 138, 0.3) 105%);
   }
+}
+html {
+  scroll-behavior: smooth;
 }

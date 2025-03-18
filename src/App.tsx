@@ -4,18 +4,19 @@ import HomeSection from "./components/HomeSection/HomeSection";
 import AboutSection from "./components/AboutSection/AboutSection";
 import SwapSection from "./components/SwapSection/SwapSection";
 import Footer from "./components/Footer/Footer";
+import ScrollArrow from "./components/ScrollArrow/ScrollArrow";
 
 function App() {
   return (
     <div>
-      <div className="min-h-screen relative overflow-hidden">
+      <div className="min-h-screen relative overflow-hidden bg-mainSection bg-cover bg-no-repeat bg-center">
         <main>
-          <div className="bg-homeSection bg-cover bg-no-repeat bg-center">
+          <div id="home" className="bg-homeSection min-h-screen bg-cover bg-no-repeat bg-center">
             <div className="relative z-50">
               <HomeSection />
             </div>
           </div>
-          <div className="bg-mainSection bg-cover bg-no-repeat bg-center">
+          <div className="px-4">
             <div className="containerCustom relative z-50">
               <AboutSection />
               <SwapSection />
@@ -30,6 +31,7 @@ function App() {
         </div>
         <div className="absolute inset-0 bg-layoutDot bg-cover bg-no-repeat bg-center z-20"></div>
       </div>
+      <ScrollArrow />
       <Footer />
     </div>
   );

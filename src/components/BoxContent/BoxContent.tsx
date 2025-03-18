@@ -19,10 +19,10 @@ const BoxContent: FC<
         ease: "easeOut",
         delay: delayAnimation,
       }}
-      className={`bg-bgBorder rounded-[24px] overflow-hidden p-[1px] min-h-[215px] ${extendClassName}`}
+      className={`bg-bgBorder rounded-[24px] overflow-hidden p-[1px] ${extendClassName}`}
     >
       <div
-        className={`py-10 px-8 text-center rounded-[24px] bg-[#161027] min-h-full`}
+        className={`py-10 px-8 text-center rounded-[24px] bg-[#161027] min-h-full flex items-center flex-col justify-center`}
       >
         {children}
       </div>
