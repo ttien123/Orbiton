@@ -5,13 +5,19 @@ import AboutSection from "./components/AboutSection/AboutSection";
 import SwapSection from "./components/SwapSection/SwapSection";
 import Footer from "./components/Footer/Footer";
 import ScrollArrow from "./components/ScrollArrow/ScrollArrow";
+import ScrollArrowMobi from "./components/ScrollArrowMobi/ScrollArrowMobi";
+import { useMediaQuery } from "react-responsive";
 
 function App() {
+  const isDesktop = useMediaQuery({ minWidth: 1024 });
   return (
     <div>
       <div className="min-h-screen relative overflow-hidden bg-mainSection bg-cover bg-no-repeat bg-center">
         <main>
-          <div id="home" className="bg-homeSection min-h-screen bg-cover bg-no-repeat bg-center">
+          <div
+            id="home"
+            className="bg-homeSection min-h-screen bg-cover bg-no-repeat bg-center"
+          >
             <div className="relative z-50">
               <HomeSection />
             </div>
@@ -31,7 +37,12 @@ function App() {
         </div>
         <div className="absolute inset-0 bg-layoutDot bg-cover bg-no-repeat bg-center z-20"></div>
       </div>
-      <ScrollArrow />
+      <div className="lg:block hidden">
+        {isDesktop && <ScrollArrow />}
+      </div>
+      <div className="lg:hidden block">
+        <ScrollArrowMobi />
+      </div>
       <Footer />
     </div>
   );

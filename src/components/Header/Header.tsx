@@ -13,9 +13,9 @@ const Header = () => {
           <img src={IconLogo} alt="Logo" />
         </div>
       </div>
-      <div className="lg:block hidden">
+      {/* <div className="lg:block hidden">
         <SideNav />
-      </div>
+      </div> */}
       <div className="lg:block hidden">
         <ButtonPrimary />
       </div>
