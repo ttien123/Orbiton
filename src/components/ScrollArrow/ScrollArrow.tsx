@@ -14,7 +14,7 @@ const ScrollArrow = () => {
       return 
     }
     setIsScrolling(true);
-    setTimeout(() => setIsScrolling(false), 1000);
+    setTimeout(() => setIsScrolling(false), 800);
     if (isAtBottom) {
       scroller.scrollTo("home", { smooth: true, duration: 800, spy: true });
     } else {
@@ -75,7 +75,7 @@ const ScrollArrow = () => {
       setIsAtBottom(isBottom);
       if (isScrolling) return;
       setIsScrolling(true);
-      setTimeout(() => setIsScrolling(false), 1000);
+      setTimeout(() => setIsScrolling(false), 800);
 
       const index = getCurrentSectionIndex();
       console.log(currentScrollY);

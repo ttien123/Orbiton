@@ -84,6 +84,3 @@
     border-image: linear-gradient(270.23deg, #FFFFFF -0.2%, rgba(138, 138, 138, 0.3) 105%);
   }
 }
-html {
-  scroll-behavior: smooth;
-}
