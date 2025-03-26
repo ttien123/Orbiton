@@ -62,7 +62,6 @@ const ScrollArrow = () => {
           gsap.to(window, {
             scrollTo: { y : sections[indexSection + 1] as any, autoKill: false },
             duration: 0.85,
-            ease: "power3.inOut",
             onComplete: () => {
               isScrolling= false
               if (indexSection === sections.length - 1) {
@@ -78,7 +77,6 @@ const ScrollArrow = () => {
           gsap.to(window, {
             scrollTo: { y : sections[0] as any, autoKill: false },
             duration: 0.85,
-            ease: "power3.inOut",
             onComplete: () => {
               isScrolling= false
               setIsAtBottom(false)
