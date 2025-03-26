@@ -5,7 +5,7 @@ const AboutSection = () => {
   return (
     <div
       id="about"
-      className="pt-[20px] lg:pt-[70px] pb-[80px] min-h-screen flex flex-col items-center justify-center"
+      className="panel h-screen pt-[20px] lg:pt-[70px] pb-[80px] flex flex-col items-center justify-center"
     >
       <motion.div
         initial={{ opacity: 0 }}

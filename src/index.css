@@ -65,7 +65,7 @@
     @apply border-border;
   }
   body {
-    @apply font-michroma box-border font-normal text-[16px];
+    @apply font-michroma box-border font-normal text-[16px] h-screen;
   }
 }
 

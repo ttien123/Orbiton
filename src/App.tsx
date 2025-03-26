@@ -12,11 +12,11 @@ function App() {
   const isDesktop = useMediaQuery({ minWidth: 1024 });
   return (
     <div>
-      <div className="min-h-screen relative overflow-hidden bg-mainSection bg-cover bg-no-repeat bg-center">
+      <div className="relative overflow-hidden bg-mainSection bg-cover bg-no-repeat bg-center">
         <main>
           <div
             id="home"
-            className="bg-homeSection min-h-screen bg-cover bg-no-repeat bg-center"
+            className="panel bg-homeSection bg-cover bg-no-repeat bg-center h-screen"
           >
             <div className="relative z-50">
               <HomeSection />

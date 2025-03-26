@@ -12,7 +12,7 @@ const SwapSection = () => {
   const swiperRef = useRef<SwiperType | null>(null);
   const [activeIndex, setActiveIndex] = useState(0);
   return (
-    <div id="swap" className="flex items-center justify-between gap-4 lg:gap-[75px] min-h-screen">
+    <div id="swap" className="panel h-screen flex items-center justify-between gap-4 lg:gap-[75px]">
       <div className="text-white flex-shrink-0 flex items-center justify-start">
         <button
           disabled={activeIndex === 0}
