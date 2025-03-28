@@ -104,12 +104,12 @@ const ScrollArrow = () => {
       >
         {!isAtBottom ? (
           <span className="flex items-center justify-center flex-col gap-3">
-            <img src={ArrowDown} alt="" />
+            <img src={ArrowDown} alt="arrow" className="animate-arrowAnimation"/>
             Scroll down
           </span>
         ) : (
           <span className="flex items-center justify-center flex-col gap-3">
-            <img src={ArrowUp} alt="" />
+            <img src={ArrowUp} alt="arrow" className="animate-arrowAnimation"/>
             Scroll up
           </span>
         )}

@@ -11,12 +11,11 @@ const AboutSection = () => {
         initial={{ opacity: 0 }}
         whileInView={{
           opacity: 1,
-        }}
-        viewport={{ once: true }}
-        transition={{
-          duration: 1.5,
-          ease: "easeOut",
-          delay: 0.25,
+          transition: {
+            duration: 1.5,
+            ease: "easeOut",
+            delay: 0.25,
+          }
         }}
         className="bg-bgSectionHeader text-[#FBFCF4] max-w-[115px] py-[17px] p-[10px] mx-auto text-center rounded-[10px] mb-8"
       >
@@ -27,12 +26,11 @@ const AboutSection = () => {
         whileInView={{
           y: 0,
           opacity: 1,
-        }}
-        viewport={{ once: true }}
-        transition={{
-          duration: 0.5,
-          ease: "easeOut",
-          delay: 0.15,
+          transition: {
+            duration: 0.5,
+            ease: "easeOut",
+            delay: 0.15,
+          }
         }}
         className="text-[45px] text-center mb-4 text-primary-custom"
       >
@@ -42,13 +40,13 @@ const AboutSection = () => {
         initial={{ opacity: 0 }}
         whileInView={{
           opacity: 1,
+          transition: {
+            duration: 1.5,
+            ease: "easeOut",
+            delay: 0.25,
+          }
         }}
-        viewport={{ once: true }}
-        transition={{
-          duration: 1.5,
-          ease: "easeOut",
-          delay: 0.25,
-        }}
+        
         className="text-[18px] text-white text-center mb-[55px]"
       >
         <span className="bg-[#0098E9] px-2 rounded-[8px] inline-block lg:inline mb-2">TON</span> 

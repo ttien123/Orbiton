@@ -7,6 +7,7 @@ import { Scrollbar } from "swiper/modules";
 import { Swiper as SwiperType } from "swiper";
 import "swiper/css";
 import { useRef, useState } from "react";
+import { motion } from "motion/react";
 
 const SwapSection = () => {
   const swiperRef = useRef<SwiperType | null>(null);
@@ -38,24 +39,73 @@ const SwapSection = () => {
           <SwiperSlide key={index}>
             <div className="lg:flex items-center justify-between lg:text-left text-center">
               <div>
-                <div>
+                <motion.div 
+                initial={{ opacity: 0 }}
+                whileInView={{
+                  opacity: 1,
+                  transition: {
+                    duration: 1,
+                    ease: "easeOut",
+                    delay: 0.35,
+                  }
+                }}>
                   <button className="bg-bgSectionHeader text-[#FBFCF4] py-[17px] px-[24px] rounded-[10px] mb-6">
                     Solution
                   </button>
-                </div>
-                <div className="text-[32px] lg:text-[70px] mb-4 text-primary-custom">
+                </motion.div>
+                <motion.div 
+                initial={{ y: "80%", opacity: 0 }}
+                whileInView={{
+                  y: 0,
+                  opacity: 1,
+                  transition: {
+                    duration: 0.35,
+                    ease: "easeOut",
+                    delay: 0.45,
+                  }
+                }} className="text-[32px] lg:text-[70px] mb-4 text-primary-custom">
                   Swap Flow
-                </div>
-                <div className="text-white">
+                </motion.div>
+                <motion.div 
+                initial={{ y: "100%", opacity: 0 }}
+                whileInView={{
+                  y: 0,
+                  opacity: 1,
+                  transition: {
+                    duration: 0.35,
+                    ease: "easeOut",
+                    delay: 0.85,
+                  }
+                }} className="text-white">
                   Trade Crypto with Confidence on Our Growing Platform
-                </div>
-                <div className="mt-10 lg:block hidden">
+                </motion.div>
+                <motion.div 
+                initial={{ y: "100%", opacity: 0 }}
+                whileInView={{
+                  y: 0,
+                  opacity: 1,
+                  transition: {
+                    duration: 0.35,
+                    ease: "easeOut",
+                    delay: 1,
+                  }
+                }} className="mt-10 lg:block hidden">
                   <ButtonPrimary extendClassName="py-5 px-[30px] w-auto" isLarge/>
-                </div>
+                </motion.div>
               </div>
-              <div className="mt-[66px]">
+              <motion.div  
+              initial={{ opacity: 0 }}
+              whileInView={{
+                opacity: 1,
+                transition: {
+                  duration: 1,
+                  ease: "easeOut",
+                  delay: 0.8,
+                }
+              }} 
+              className="mt-[66px]">
                 <img src={iphoneImg2} alt="Logo" className="mx-auto lg:mx-0"/>
-              </div>
+              </motion.div>
             </div>
           </SwiperSlide>
         ))}

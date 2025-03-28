@@ -14,15 +14,14 @@ const HomeSection = () => {
             whileInView={{
               y: [0, 50, 5, 0],
               opacity: [0, 0.5, 0.75, 1],
-            }}
-            viewport={{ once: true }}
-            transition={{
-              duration: 0.85,
-              times: [0, 0.5, 0.75, 1],
-              ease: "easeOut",
-              stiffness: 200,
-              damping: 10,
-              delay: 0.2,
+              transition: {
+                duration: 0.85,
+                times: [0, 0.5, 0.75, 1],
+                ease: "easeOut",
+                stiffness: 200,
+                damping: 10,
+                delay: 0.2,
+              }
             }}
             src={Orbitontext}
             alt="Orbiton"
@@ -34,12 +33,11 @@ const HomeSection = () => {
               whileInView={{
                 y: 0,
                 opacity: 1,
-              }}
-              viewport={{ once: true }}
-              transition={{
-                duration: 0.45,
-                ease: "easeOut",
-                delay: 0.8,
+                transition: {
+                  duration: 0.45,
+                  ease: "easeOut",
+                  delay: 0.8,
+                }
               }}
               className="text-primary-custom"
             >
@@ -50,12 +48,11 @@ const HomeSection = () => {
               whileInView={{
                 y: 0,
                 opacity: 1,
-              }}
-              viewport={{ once: true }}
-              transition={{
-                duration: 0.45,
-                ease: "easeOut",
-                delay: 1.15,
+                transition: {
+                  duration: 0.45,
+                  ease: "easeOut",
+                  delay: 1.15,
+                }
               }}
               className="text-primary-custom"
             >
@@ -67,12 +64,11 @@ const HomeSection = () => {
             whileInView={{
               y: 0,
               opacity: 0.85,
-            }}
-            viewport={{ once: true }}
-            transition={{
-              duration: 0.45,
-              ease: "easeOut",
-              delay: 1.5,
+              transition: {
+                duration: 0.45,
+                ease: "easeOut",
+                delay: 1.5,
+              }
             }}
             className="lg:mt-10 mt-4"
           >
@@ -86,12 +82,11 @@ const HomeSection = () => {
           initial={{ opacity: 0 }}
           whileInView={{
             opacity: 1,
-          }}
-          viewport={{ once: true }}
-          transition={{
-            duration: 1.5,
-            ease: "easeOut",
-            delay: 0.25,
+            transition: {
+              duration: 1.5,
+              ease: "easeOut",
+              delay: 0.25,
+            }
           }}
           className="lg:block hidden"
         >
@@ -101,12 +96,11 @@ const HomeSection = () => {
           initial={{ opacity: 0 }}
           whileInView={{
             opacity: 1,
-          }}
-          viewport={{ once: true }}
-          transition={{
-            duration: 1.5,
-            ease: "easeOut",
-            delay: 1.5,
+            transition: {
+              duration: 1.5,
+              ease: "easeOut",
+              delay: 1.5,
+            }
           }}
           className="lg:hidden block"
         >

@@ -12,12 +12,11 @@ const BoxContent: FC<
       initial={{ opacity: 0 }}
       whileInView={{
         opacity: 1,
-      }}
-      viewport={{ once: true }}
-      transition={{
-        duration: 1.5,
-        ease: "easeOut",
-        delay: delayAnimation,
+        transition: {
+          duration: 1.5,
+          ease: "easeOut",
+          delay: delayAnimation,
+        }
       }}
       className={`bg-bgBorder rounded-[24px] overflow-hidden p-[1px] ${extendClassName}`}
     >
